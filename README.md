@@ -1,1 +1,0 @@
-# YashIsCursed.github.io

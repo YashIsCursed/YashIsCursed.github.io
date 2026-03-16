@@ -3,11 +3,13 @@ import {useRef, useState} from "react";
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
 import {ScrollTrigger,SplitText,Observer} from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger,SplitText,Observer);
+
 function App() {
     const NameT = useRef(null);
     const linkList = useRef(null);
     const [menu,setMenu] = useState(false);
-    gsap.registerPlugin(ScrollTrigger,SplitText,Observer);
 
     useGSAP(()=> {
         // On Load

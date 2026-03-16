@@ -8,13 +8,16 @@ export default function Loading() {
     const box= useRef(null);
 
     useGSAP(()=> {
+        let a;
         gsap.timeline()
             .from(textC.current, {opacity: 0,duration: 0.25})
             .call(() => {
                 let count = 0;
-                let a = setInterval(_e=> {
-                    textC.current.innerText += "."
-                    count >= 10 ? clearTimeout(a) : count += 1
+                a = setInterval(()=> {
+                    if (textC.current) {
+                        textC.current.innerText += "."
+                    }
+                    count >= 10 ? clearInterval(a) : count += 1
                 }, 200)
             })
             .to(textC.current, {opacity: 0, duration: 1, delay: 1})
@@ -22,6 +25,11 @@ export default function Loading() {
             // .to(box.current, {width: "0%", duration: 1})
             .to(loadingC.current, {width:0, duration: 1,onComplete: () => {loadingC.current.remove()}})
 
+        return () => {
+            if (a) {
+                clearInterval(a);
+            }
+        };
     })
     return(
         <>

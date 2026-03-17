@@ -1,0 +1,3 @@
+## 2024-05-18 - App Shell Code Splitting Pattern
+**Learning:** Even in single-page applications without traditional routing, using `React.lazy()` for the main application payload behind a lightweight `<Loading/>` shell effectively prioritizes the initial visual paint. Because the `Loading` component stays overlaid for 3.5s via GSAP animations, the main `App.jsx` and its dependencies (like `gsap/all`) can be downloaded in the background asynchronously without blocking the critical rendering path.
+**Action:** Always consider `React.lazy()` for the main `App` component if an application already features a distinct, lightweight initial loading screen or splash screen.

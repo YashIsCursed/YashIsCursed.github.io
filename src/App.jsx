@@ -44,9 +44,13 @@ function App() {
             </div>
             <div className="relative">
                 <button
-                    className="lg:hidden text-[32px]"
+                    className="lg:hidden text-[32px] focus-visible:ring-2 focus-visible:outline-none"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded={menu}
+                    aria-controls="navigation-menu"
                     onClick={()=>{setMenu(!menu)}}>⇶</button>
                 <ul
+                    id="navigation-menu"
                     ref={linkList}
                     className={`h-fit ${menu?'flex bg-[#A3A3D310] py-4 px-8 rounded-xl absolute right-full top-[120%]':'hidden'} lg:flex flex-col lg:flex-row gap-6 overflow-y-hidden px-2 text-xl`}>
                     <li className="links">About</li>

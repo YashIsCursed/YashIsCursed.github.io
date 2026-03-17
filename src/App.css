@@ -13,6 +13,8 @@
 .links:hover{
   text-shadow: 0 0 10px #A0DDA0;
   color: #A0DDA0;
+  cursor: pointer;
+
 }
 .links::after{
   content: "";
@@ -20,10 +22,4 @@
   height: 100%;
   background-color: #D3F3D3;
   display: block;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
 }

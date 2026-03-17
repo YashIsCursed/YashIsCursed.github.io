@@ -83,7 +83,7 @@ button:focus-visible {
 @layer base{
   @font-face {
     font-family: 'Ranade-BoldItalic';
-    src: url("./assets/Fonts/WEB/fonts/Ranade-Light.woff2") format('woff2');
+    src: url("./assets/Ranade_Complete/Fonts/WEB/fonts/Ranade-Light.woff2") format('woff2');
     font-weight: 400;
     font-display: swap;
   }

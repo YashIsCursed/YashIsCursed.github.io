@@ -12,7 +12,7 @@ export default function Loading() {
             .from(textC.current, {opacity: 0,duration: 0.25})
             .call(() => {
                 let count = 0;
-                let a = setInterval(_e=> {
+                let a = setInterval(() => {
                     textC.current.innerText += "."
                     count >= 10 ? clearTimeout(a) : count += 1
                 }, 200)

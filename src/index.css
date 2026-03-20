@@ -8,8 +8,9 @@
   print-color-adjust: exact;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(241, 255, 217, 0.8);
+  background-color: #151515;
+  animation: changeColor 2s infinite alternate;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -27,7 +28,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
   &::selection{
-    background-color: #A0DDA0;
+    background-color: #c8ffc8;
     color: #242424;
     text-shadow: 0 0 5px #000;
   }
@@ -80,11 +81,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-@layer base{
-  @font-face {
-    font-family: 'Ranade-BoldItalic';
-    src: url("./assets/Fonts/WEB/fonts/Ranade-Light.woff2") format('woff2');
-    font-weight: 400;
-    font-display: swap;
-  }
+img::selection {
+    filter: grayscale(0);
+    background-color: #008500;
 }

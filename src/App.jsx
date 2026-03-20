@@ -16,7 +16,8 @@ function App() {
         // On Load
         let name = SplitText.create(NameT.current,{type:"chars, words"})
         gsap.from(name.chars,{
-            y: 100,
+            y: "100%",
+            opacity: 0,
             stagger: 0.1,
             delay:3
         })
@@ -41,10 +42,12 @@ function App() {
   return (
       <>
           <div className="w-full h-screen my-8 flex flex-col gap-12">
-              <div className="flex flex-row w-full justify-between items-center">
-                    <div className="overflow-hidden text-2xl">
-                        <h1 ref={NameT}>Yash Bokade</h1>
-                    </div>
+              <div className="flex flex-row w-full justify-between">
+                  <div className="overflow-hidden tracking-[-16px] text-left text-4xl">
+                      <h1 ref={NameT}>Yash Bokade</h1>
+                  </div>
+                  <div className="flex flex-col gap-8 items-center">
+                    {/*  Nav  */}
                     <div className="relative">
                         <div
                             className="lg:hidden text-[32px]"
@@ -83,9 +86,17 @@ function App() {
                                 className="links"><p>Resume</p></li>
                         </ul>
                     </div>
+                    {/*  About  */}
+                      <div>
+                          <img
+                              alt="Minimalist architectural space with play of light"
+                              className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
+                              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf3rkFxRWaRwlYERzuG7U4qw0PrH8Ec2ORafqDuyLBJ_UzdF3JM-DUqPFOhYreplH7MjRvgtMhTa2iWXrHio4yk_IHCUxD-nJLzZuiEN6hGGfmOwxC5s7bVEyShBvngMmVNXFSwg6LDGxcuAhZ0V1igafJHOPg4scNChY36qNjc7K5Wijwsp4nbu6g9iuL1PkF83-wldGI9oo_i893cbXD-pppaiYJvDUDop8UGI8q5d1_6noMooFxZBQ1Xre92O1-Sq6QEyPgAmI"/>
+                      </div>
+                  </div>
               </div>
-              <div>
-                  <p className="text-[16px]">About</p>
+              {/*  footer  */}
+              <div className="w-full h-fit flex justify-center items-center bg-black">
                   <div id={"About"} className="w-full h-screen">
                       About
                   </div>

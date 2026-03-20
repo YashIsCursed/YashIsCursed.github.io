@@ -18,9 +18,9 @@ export default function Loading() {
                 }, 200)
             })
             .to(textC.current, {opacity: 0, duration: 1, delay: 1})
-            .from(box.current, {width: "100%", duration: 0.5})
+            .from(box.current, {width: "100%",backgroundColor:"#1f1f1f" , duration: 0.5,onComplete: () => {loadingC.current.remove()}})
             // .to(box.current, {width: "0%", duration: 1})
-            .to(loadingC.current, {width:0, duration: 1,onComplete: () => {loadingC.current.remove()}})
+            // .to(loadingC.current, {width:0, duration: 1,})
 
     })
     return(

@@ -3,7 +3,7 @@ import gsap from "gsap";
 
 // ─── Pixel load bar ────────────────────────────────────────────────────────────
 export default function PixelLoadBar() {
-  const TOTAL = 20;
+  const TOTAL = 25;
   const ref = useRef(null);
   useEffect(() => {
     if (!ref.current) return;

@@ -104,9 +104,10 @@ function GlitchLines() {
 }
 
 // ─── Animated email link ───────────────────────────────────────────────────────
-function EmailLink() {
-  const ref      = useRef(null);
-  const lineRef  = useRef(null);
+function EmailLink({ align = "left" }) {
+  const ref     = useRef(null);
+  const lineRef = useRef(null);
+  const origin  = align === "right" ? "right" : "left";
 
   const enter = () => {
     gsap.to(lineRef.current, { scaleX: 1, duration: 0.4, ease: "power3.out" });
@@ -133,6 +134,7 @@ function EmailLink() {
           letterSpacing: "0.04em",
           display: "block",
           paddingBottom: "6px",
+          textAlign: align,
         }}
       >
         yash.mahendra.bokade@gmail.com
@@ -142,7 +144,7 @@ function EmailLink() {
         style={{
           position: "absolute", bottom: 0, left: 0, right: 0, height: "1px",
           background: "rgba(255,255,255,0.5)",
-          transform: "scaleX(0)", transformOrigin: "left",
+          transform: "scaleX(0)", transformOrigin: origin,
         }}
       />
     </div>
@@ -231,38 +233,52 @@ export default function ContactSlide() {
         </span>
       </div>
 
-      {/* ── Center content ── */}
+      {/* ── Center content — two columns ── */}
       <div style={{
-        flex: 1, display: "flex", flexDirection: "column",
-        justifyContent: "center", alignItems: "flex-start",
+        flex: 1, display: "flex", flexDirection: "row",
+        alignItems: "flex-end",
         padding: "4vw 8vw", position: "relative", zIndex: 5,
+        gap: "4vw",
       }}>
-        <GlitchLines />
+        {/* Left: big headline + glitch lines */}
+        <div style={{ flex: "1 1 0", display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
+          <GlitchLines />
+          <h2
+            ref={headRef}
+            className="slide-text"
+            style={{
+              fontFamily: BEBAS,
+              fontSize: "clamp(4.5rem, 11vw, 14rem)",
+              color: "#fff",
+              lineHeight: 0.87,
+              letterSpacing: "0.01em",
+              margin: 0,
+              opacity: 0,
+            }}
+          >
+            LET'S<br />
+            <span style={{ color: "rgba(255,255,255,0.2)" }}>BUILD</span><br />
+            TOGETHER.
+          </h2>
+        </div>
 
-        <h2
-          ref={headRef}
-          className="slide-text"
+        {/* Right: email + social + tagline */}
+        <div
+          ref={bodyRef}
           style={{
-            fontFamily: BEBAS,
-            fontSize: "clamp(4.5rem, 13vw, 15rem)",
-            color: "#fff",
-            lineHeight: 0.87,
-            letterSpacing: "0.01em",
-            margin: "0 0 3.5rem",
-            opacity: 0,
+            flex: "0 0 auto",
+            display: "flex", flexDirection: "column",
+            alignItems: "flex-end",
+            gap: "1.6rem",
+            paddingBottom: "0.5rem",
+            minWidth: "min(380px, 38vw)",
           }}
         >
-          LET'S<br />
-          <span style={{ color: "rgba(255,255,255,0.2)" }}>BUILD</span><br />
-          TOGETHER.
-        </h2>
-
-        <div ref={bodyRef} style={{ display: "flex", flexDirection: "column", gap: "1.8rem" }}>
           {/* Email */}
-          <EmailLink />
+          <EmailLink align="right" />
 
           {/* Social links */}
-          <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap", justifyContent: "flex-end" }}>
             <SocialPill href="https://github.com/Yash-Bokade" label="GITHUB →" />
             <SocialPill href="https://linkedin.com/in/YashBokade" label="LINKEDIN →" />
             <SocialPill href="tel:+918459850489" label="+91 8459850489" />
@@ -271,14 +287,15 @@ export default function ContactSlide() {
           {/* Tagline */}
           <p style={{
             fontFamily: SANS,
-            fontSize: "clamp(0.85rem, 1.2vw, 1.05rem)",
+            fontSize: "clamp(0.8rem, 1.1vw, 1rem)",
             color: "rgba(255,255,255,0.22)",
             letterSpacing: "0.05em",
             lineHeight: 1.7,
-            maxWidth: "420px",
+            maxWidth: "340px",
             margin: 0,
+            textAlign: "right",
           }}>
-            Available for freelance, full-time & collaborative projects.<br />
+            Available for freelance, full-time &amp; collaborative projects.<br />
             Response within 24 hours.
           </p>
         </div>

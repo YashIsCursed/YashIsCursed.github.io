@@ -22,23 +22,13 @@ function App() {
             duration: 1,
             ease: "power2.out"
         })
-        // .from(mainContRef.current, {
-        //     opacity: 0,
-        //     duration: 1,
-        //     ease: "sine"
-        // })
     }, [])
-    // useEffect(() => {
-    //     setSelectedItem(navlist[Math.floor(Math.abs(scroll)) % 6])
-    // }, [scroll])
+
     return (
         <>
             <div
                 ref={mainContRef}
-                // onWheel={(e) => {
-                //     setScroll(scroll + (e.deltaY))
-                //     return;
-                // }}
+
                 className={`flex justify-between items-start w-full h-full overflow-hidden gap-4 px-32 bg-black`}
             >
                 <div className={`w-[20%] flex flex-col items-start`}>

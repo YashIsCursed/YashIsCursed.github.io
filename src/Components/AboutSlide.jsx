@@ -9,7 +9,7 @@ export default function AboutSlide() {
     <div style={{ width: "100%", height: "100%", background: "#fff", display: "flex", flexDirection: "column", overflow: "hidden", position: "relative" }}>
       <ScanBar dark />
 
-      <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", padding: "4vw 8vw" }}>
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 8vw" }}>
         <p className="slide-text" style={{ fontFamily: PX25, fontSize: "1rem", letterSpacing: "0.25em", color: "rgba(0,0,0,0.35)", marginBottom: "2.5rem" }}>
           &gt; WHO_I_AM.EXE
         </p>
@@ -17,7 +17,7 @@ export default function AboutSlide() {
           fontFamily: BEBAS, fontSize: "clamp(3rem, 10vw, 11rem)",
           color: "#000", lineHeight: 0.88, letterSpacing: "0.02em", marginBottom: "3rem",
         }}>
-          BUILDING THE<br />SHARP EDGE<br />OF THE WEB.
+          BUILDING THE SHARP<br/>EDGE OF THE WEB.
         </h2>
 
         <div style={{ display: "flex", gap: "6vw", flexWrap: "wrap" }}>
@@ -40,11 +40,10 @@ export default function AboutSlide() {
 
       <div className="slide-text" style={{
         borderTop: "1px solid rgba(0,0,0,0.08)", padding: "0.8rem 8vw",
-        display: "flex", alignItems: "center", gap: "1rem",
+        display: "flex", alignItems: "center", justifyContent:"start", gap: "1rem",
       }}>
-        <span style={{ fontFamily: PX10, fontSize: "0.72rem", color: "rgba(0,0,0,0.3)", flexShrink: 0 }}>SYS_LOAD</span>
-        <PixelLoadBar />
-        <span style={{ fontFamily: PX10, fontSize: "0.72rem", color: "rgba(0,0,0,0.35)", flexShrink: 0 }}>100%</span>
+        <span style={{ fontFamily: PX10, fontSize: "0.72rem", color: "rgba(0,0,0,0.3)", flexShrink: 0 }}>B·Tech</span>
+        <span style={{ fontFamily: PX10, fontSize: "0.72rem", color: "rgba(0,0,0,0.3)", flexShrink: 0 }}>Diploma in Computer Engineering </span>
       </div>
     </div>
   );

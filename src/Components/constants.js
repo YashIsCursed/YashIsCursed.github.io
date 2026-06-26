@@ -16,11 +16,11 @@ export const SLIDES = [
 
 // ─── Project data ──────────────────────────────────────────────────────────────
 export const PROJECTS = [
-  { n: "001", title: "INFINITY TAB", type: "REACT", year: "2026", desc: "This is a Web browser extension that allows user to customize their new tab page" },
-  { n: "002", title: "AI COUNCIL", type: "REACT, MISTRAL-AI", year: "2026", desc: "5 distinct AI personalities and The Concluder, synthesizes everything into a clear, actionable answer:\"What should you really do?\"" },
-  { n: "003", title: "CLI HELPER", type: "KOTLIN, MISTRAL-AI", year: "2026", desc: "A command-line tool built with Kotlin, A Ito translate natural language into executable commands" },
-  { n: "004", title: "AWAYSPOT", type: "JSP TOMCAT", year: "2025", desc: "A JSP Web Project for hotels Booking, and Renting Using Tomcat Server," },
-  { n: "005", title: "PYTHON MP", type: "PYTHON", year: "2025", desc: "A Micro-Project for Python simple GUI application for task management (CRUD)" },
+  { n: "001", title: "INFINITY TAB", type: "REACT", year: "2026", desc: "This is a Web browser extension that allows user to customize their new tab page", link: "https://github.com/Yash-Bokade/infinite-newtab" },
+  { n: "002", title: "AI COUNCIL", type: "REACT, MISTRAL-AI", year: "2026", desc: "5 distinct AI personalities and The Concluder, synthesizes everything into a clear, actionable answer:\"What should you really do?\"", link: "https://github.com/Yash-Bokade/ai_Emotion_Actions" },
+  { n: "003", title: "CLI HELPER", type: "KOTLIN, MISTRAL-AI", year: "2026", desc: "A command-line tool built with Kotlin, A Ito translate natural language into executable commands", link: "https://github.com/Yash-Bokade/cliHelper" },
+  { n: "004", title: "AWAYSPOT", type: "JSP TOMCAT", year: "2025", desc: "A JSP Web Project for hotels Booking, and Renting Using Tomcat Server,", link: "https://github.com/Yash-Bokade/Awayspot" },
+  { n: "005", title: "PYTHON MP", type: "PYTHON", year: "2025", desc: "A Micro-Project for Python simple GUI application for task management (CRUD)", link: "https://github.com/Yash-Bokade/Python-Project-Task-Management" },
 ];
 
 // ─── Skills data ───────────────────────────────────────────────────────────────

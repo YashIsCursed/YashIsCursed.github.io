@@ -23,11 +23,12 @@ export default function ProjectCell({ p, idx }) {
   };
 
   return (
-    <div onMouseEnter={flood} onMouseLeave={drain} style={{
+    <a href={p.link} target="_blank" rel="noopener noreferrer" onMouseEnter={flood} onMouseLeave={drain} style={{
       background: "#0a0a0a", position: "relative", overflow: "hidden",
       display: "flex", flexDirection: "column",
       justifyContent: "flex-end", padding: "1.5rem 2rem",
-      cursor: "crosshair", minHeight: 0, minWidth: 0,
+      cursor: "pointer", minHeight: 0, minWidth: 0,
+      textDecoration: "none", color: "inherit",
     }}>
       <div ref={gridRef} style={{
         position: "absolute", inset: 0, display: "grid",
@@ -66,6 +67,6 @@ export default function ProjectCell({ p, idx }) {
           {p.type}
         </span>
       </div>
-    </div>
+    </a>
   );
 }

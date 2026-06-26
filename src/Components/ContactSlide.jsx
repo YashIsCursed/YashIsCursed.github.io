@@ -280,7 +280,7 @@ export default function ContactSlide() {
           {/* Social links */}
           <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap", justifyContent: "flex-end" }}>
             <SocialPill href="https://github.com/Yash-Bokade" label="GITHUB →" />
-            <SocialPill href="https://linkedin.com/in/YashBokade" label="LINKEDIN →" />
+            <SocialPill href="https://www.linkedin.com/in/yash-mahendra-bokade" label="LINKEDIN →" />
             <SocialPill href="tel:+918459850489" label="+91 8459850489" />
           </div>
 
